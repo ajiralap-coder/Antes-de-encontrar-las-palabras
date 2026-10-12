@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4eee6">
+  <meta name="description" content="Antes de encontrar las palabras. Un libro para Agustina.">
+  <title>Antes de encontrar las palabras — Un libro para Agustina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#" aria-label="Volver a la portada" id="homeLink">antes de encontrar las palabras<span>✳</span></a>
+    <div class="topbar-actions">
+      <button class="quiet-button" id="contentsButton" type="button">Contenido</button>
+      <button class="quiet-button" id="soundButton" type="button" aria-pressed="false" title="Activar o desactivar sonido">Sonido: apagado</button>
+    </div>
+  </header>
+  <main>
+    <section class="intro" id="intro">
+      <p class="eyebrow">UN LIBRO PARA AGUSTINA</p>
+      <h1>Antes de encontrar<br><em>las palabras.</em></h1>
+      <p class="intro-copy">Recuerdos, preguntas y una historia contada sin apuro.</p>
+      <button class="primary-button" id="openBookButton" type="button">Abrir el libro <span aria-hidden="true">↗</span></button>
+      <p class="tiny-note">Una página a la vez · Hecho con cariño</p>
+    </section>
+    <section class="reader hidden" id="reader" aria-label="Libro digital">
+      <div class="reader-heading">
+        <div><p class="eyebrow">PARA LEER SIN APURO</p><h2 id="sectionHeading">La primera página</h2></div>
+        <div class="page-counter" id="pageCounter">01 / 01</div>
+      </div>
+      <div class="book-stage"><div class="book" id="book">
+        <div class="book-spread" id="spread" aria-live="polite">
+          <article class="paper left-paper" id="leftPage"></article>
+          <article class="paper right-paper" id="rightPage"></article>
+          <div class="turn-sheet" id="turnSheet" aria-hidden="true"><div class="turn-face turn-front" id="turnFront"></div><div class="turn-face turn-back" id="turnBack"></div></div>
+        </div><div class="book-shadow" aria-hidden="true"></div>
+      </div></div>
+      <div class="reader-controls"><button class="round-button" id="prevButton" type="button" aria-label="Página anterior" disabled>←</button><p class="turn-hint" id="turnHint">Usá las flechas para pasar las páginas</p><button class="round-button" id="nextButton" type="button" aria-label="Página siguiente">→</button></div>
+      <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+      <button class="text-button" id="backToIntro" type="button">Volver a la portada</button>
+    </section>
+    <section class="contents-panel hidden" id="contentsPanel" aria-label="Índice del libro"><div class="contents-card"><button class="close-button" id="closeContents" type="button" aria-label="Cerrar índice">×</button><p class="eyebrow">EL MAPA DE ESTAS PÁGINAS</p><h2>Contenido</h2><p class="contents-intro">Podés ir a cualquier parte del libro. No hay un orden obligatorio para volver a leer.</p><ol id="contentsList" class="contents-list"></ol></div></section>
+  </main>
+  <footer class="site-footer"><span>Un libro para Agustina.</span><span>✳</span></footer>
+  <script src="book-content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
